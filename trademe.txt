@@ -1,0 +1,9 @@
+3
+Ben G 1 1200 5
+McDonald B 0 500 35
+Lucky D 0 633 9
+ML G 1
+V1 B 0
+RCH D 1
+PAS G 0
+CPH G 0
