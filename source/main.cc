@@ -68,7 +68,6 @@ int main(int argc, char *argv[]) {
         stringstream newInsert(someCommand); 
         newInsert >> numPlayers;
 
-        // players.resize(numPlayers);
         NUM_PLAYERS = numPlayers;
 
         for (int i = 0; i < numPlayers; i++){
@@ -120,31 +119,13 @@ int main(int argc, char *argv[]) {
             Player * newPlayer = new Player();
             newPlayer->init(name, character, 0);
             players.emplace_back(newPlayer);
-            // players[i]->init(name, character, 0);
             board.addPlayer(players[i]);
             board.setNumPlayers(numPlayers);
         }
     } else {
         players = board.getListPlayers();
         NUM_PLAYERS = board.getNumPlayers();
-        // // players.resize(NUM_PLAYERS * sizeof(Player));
-        // players.resize(NUM_PLAYERS);
-        // int index = 0;
-        // vector<Player *> madePlayers = board.getListPlayers();
-        // for (auto i =players.begin(); i != players.end(); ++i) {
-        //     char name = (*i)->getName();
-        //     string type = (*i)->getPlayerType();
-        //     int position = (*i)->getCurrPosition();
-        //     cout << name << " " << type << " " << position << endl;
-        //     players[index]->init(name, type, position);
-        //     index += 1;
-        // }
     }
-    /*
-    Alice G 1 2678 39
-Bob P 1 250 10 0
-Charlie D 1 683 10 1 0
-Danielle T 0 1789 20*/
 
     // game commands
     bool dcTimsRolling = false;
@@ -171,7 +152,6 @@ Danielle T 0 1789 20*/
             cin >> cmd;
 
             if (cmd == "roll"){ 
-                //dcTimsRolling = true;
                 break; 
             }
 
@@ -205,7 +185,6 @@ Danielle T 0 1789 20*/
         bool canGo = true;
 
         while (canGo){
-            // bool loaded = false; <--- this variable is unused rn so i commented it out for now -david
             int dice1, dice2;
             if (testing == true){
                 cout << "Time to roll the dice. Please [roll # #] whenever ready." << endl;
@@ -335,10 +314,6 @@ Danielle T 0 1789 20*/
                         cout << "You have recieved a Roll Up the Rim Cup!" << endl;
                         board.addCup();
                         players[curr_player]->addCup();
-                    } else {
-                        //if we use cellType, then this block and Needles block should go under currentCell.getType()
-                        //      otherwise, move whichMovement() and amountChange() into Player Class
-                        //slc.whichMovement(players[curr_player]);
                     }
                 }
             
@@ -384,8 +359,6 @@ Danielle T 0 1789 20*/
                             if((currMoneyPlayer - fee) < 0){
                                 cout << "You are bankrupt!" << endl;
                                 players[curr_player]->setIsBankrupt(true);
-                                // cout << "You owe more than you can pay, please enter command \"bankrupt\"." << endl;
-                                // players[curr_player]->setCurrMoney(currMoneyPlayer - fee); // this should be negative
                             }
                             else {
                                 cout << "You have paid: " << to_string(fee) << endl;
@@ -395,34 +368,8 @@ Danielle T 0 1789 20*/
                         }
                     }
                 }
-                //canGo = false; 
-                //correct: ((currentCell->getCellType() == "Property") && (players[curr_player]->getNumDoubles() != 3)) //if not in dc tims line // while(canGO)
-                // else {
-                //     if ((currentCell->getOwnedBy()->getName() != players[curr_player]->getName()) && (currentCell->getIsMortgaged() == false)) {
-                //         // Player * owner = currentCell->getOwnedBy();
-                //         int currMoneyOwner = owner->getCurrMoney();
-                //         int currMoneyPlayer = players[curr_player]->getCurrMoney();
-                //         cout << "You are on someone else's property." << endl;
-                //         int fee = static_cast<Property*>(currentCell)->calculateFee(0);
-                //         cout << "The fee you must owe is: " << to_string(fee) << endl;
-                //         if((currMoneyPlayer - fee) < 0){
-                //             cout << "You owe more than you can pay, you are bankrupt!" << endl;
-                //             players[curr_player]->setIsBankrupt(true);
-                //             // players[curr_player]->setIsPlaying(true);
-                //             // bankruptPlaying = true;
-                //             // players[curr_player]->setCurrMoney(currMoneyPlayer - fee); // this should be negative
-                //         }
-                //         else {
-                //             cout << "You have paid: " << to_string(fee) << endl;
-                //             owner->setCurrMoney(currMoneyOwner + fee);
-                //             players[curr_player]->setCurrMoney(currMoneyPlayer - fee);
-                //         }
-                //     }
-                // }
             }
         }
-
-        //We should probably check to see if player's money is negative. Do this now or after end of turn?
 
         players[curr_player]->restartNumDoubles();
 
@@ -478,9 +425,6 @@ Danielle T 0 1789 20*/
                         players[curr_player]->setIsPlaying(true);
                         break; //exit the loop of selling properties
                     }
-                    // }else{
-                    //     cout << "You still don't have enough money, continuing to sell assets." << endl;
-                    // }
                 }
                 //if at the end of the loop the player still doesn't have enough then he declares bankruptcy
                 if(!enough_money){
@@ -551,9 +495,7 @@ Danielle T 0 1789 20*/
             cin >> cmd;
 
             if (cmd == "board") {
-                // cout << board.print() << endl;
             } else if (cmd == "status") {
-                // cout << board.studentStatus(players[curr_player]) << endl;
             } else if (cmd == "improve") {
                 string propertyName;
                 cin >> propertyName;
@@ -709,13 +651,6 @@ Danielle T 0 1789 20*/
                         }
                     }
                 }
-                // TO DO: HANDLE TRADE IN COMMAND LINE
-
-                // if (cmd == "yes" && board.trade(players[curr_player], players[other], g, t)) {
-                //     cout << "Trade successful!" << endl;
-                // } else {
-                //     cout << "Trade unsuccessful." << endl;
-                // }
             } else if (cmd == "next") {
 
                 if (curr_player == NUM_PLAYERS - 1) {
@@ -762,67 +697,6 @@ Danielle T 0 1789 20*/
 
             } else if (cmd == "all") {
                 board.all();
-            
-            // } else if (cmd == "bankrupt") {
-            //     int currMoneyPlayer = players[curr_player]->getCurrMoney();
-            //     cout << "You are on someone else's property." << endl;
-            //     int fee = static_cast<Property*>(currentCell)->calculateFee(0);
-            //     if(currMoneyPlayer >= 0){
-            //         cout << "You can't declare bankruptcy at the moment." << endl;
-            //     }else{
-            //         cout << "You owe more money than what you currently possess. You have 2 options:" << endl;
-            //         cout << "1) You may declare bankruptcy.\n 2) You have the option to try and raise money by selling improvements and mortgaging." << endl;
-            //         cout << "What would you like to do? (1/2) " << endl;
-            //         int n;
-            //         cin >> n;
-            //         if(n == 1){
-            //             vector<Property*> property_list = players[curr_player]->getProperty();
-            //             cout << "You have declared bankruptcy." << endl;
-            //             players[curr_player]->setIsBankrupt(true); //set player bankrupt as true
-            //             players[curr_player]->setIsPlaying(false); //they aren't in the game anymore
-            //             // in this part we give all of the player's (the one who just went bankrupt) buildings to the
-            //             // player that they owe money to
-            //             for(const auto& p : property_list){
-            //                 p->setOwnedBy(owner);
-            //                 players[curr_player]->removeProperty(p);
-            //                 owner->addProperty(static_cast<Property*>(p));
-            //             }
-                        
-            //         }else if(n == 2){
-            //             cout << "You now have the chance to raise money." << endl;
-            //             bool enough_money = false;
-            //             vector<Property*> property_list = players[curr_player]->getProperty();
-            //             // loop to sell off properties
-            //             cout << "Selling properties..." << endl;
-            //             for(const auto& p : property_list){
-            //                 // here we will sell properties until the player has enough to pay the person that they owe
-            //                 // i don't know how to sell improvements? -- have to do this after
-            //                 int building_price = p->getPropPrice(); //this temp variable will store the price of the building the person is trying to sell
-            //                 p->setOwned(false); //set the building as not owned by anybody (i think this is what it's supposed to do)
-            //                 players[curr_player]->removeProperty(p);
-            //                 currMoneyPlayer += building_price; //add the sold building to funds
-            //                 if(currMoneyPlayer >= 0){ //checks if it's enough money
-            //                     enough_money = true;
-            //                     cout << "Congratulations! You have raised enough money to pay off what you owe." << endl;
-            //                     break; //exit the loop of selling properties
-            //                 }
-            //                 // }else{
-            //                 //     cout << "You still don't have enough money, continuing to sell assets." << endl;
-            //                 // }
-            //             }
-            //             //if at the end of the loop the player still doesn't have enough then he declares bankruptcy
-            //             if(!enough_money){
-            //                 cout << "You have declared bankruptcy." << endl;
-            //                 players[curr_player]->setIsBankrupt(true);
-            //                 // give all assets to other player
-            //                 for(const auto& p : property_list){
-            //                     p->setOwnedBy(owner);
-            //                     players[curr_player]->removeProperty(p);
-            //                     owner->addProperty(static_cast<Property*>(p));
-            //                 }
-            //             }
-            //         }
-            //     }
             } else if (cmd == "assets") {
                 string assets = players[curr_player]->assets();
                 cout << assets << endl;
@@ -880,6 +754,5 @@ Danielle T 0 1789 20*/
            
         }
     }
-//}
 return 0;
 }
