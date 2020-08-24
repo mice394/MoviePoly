@@ -178,10 +178,6 @@ void Player::addProperty(Property * newProperty) {
 
 void Player::removeProperty(Property * oldProperty) {
     vector <Property *> temp = getProperty();
-
-    // for (int i = 0; i < properties.size(); i++) {
-    //     delete (properties[i]);
-    // } 
     properties.clear();
 
     for(auto i = temp.begin(); i != temp.end(); ++i){

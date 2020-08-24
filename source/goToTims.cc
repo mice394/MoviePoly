@@ -15,7 +15,6 @@ void GoToTims::movePlayer(Player * somePlayer){
 
     somePlayer->setPositions(10);
     somePlayer->setTimeSpentInTims(0);
-    // curr.setNumDoubles(0);
     somePlayer->setInTimsLine(true);
 }
 

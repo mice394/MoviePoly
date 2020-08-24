@@ -8,15 +8,6 @@ SLC::SLC(int n){
 
 SLC::~SLC() {}
 
-// Back 3 1=8
-// Back 2 1=6
-// Back 1 1=6
-// Forward 1 1=8
-// Forward 2 1=6
-// Forward 3 1=6
-// Go to DC Tims Line 1=24
-// Advance to Collect OSAP 1=24
-
 void SLC::whichMovement(Player * currPlayer) {
     int chance = rand() % 24;
     string answer;

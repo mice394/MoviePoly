@@ -150,13 +150,6 @@ Board::~Board() {
     for (int i = 0; i < 40; i++) {
         detach(cellList[i]);
     }
-    // for (int i = 0; i < 40; i++) {
-    //     delete cellList[i];
-    // }
-    // for (int i = 0; i < listPlayers.size(); i++) {
-    //     delete listPlayers[i];
-    // }
-    // listPlayers.clear();
     cellList.clear();
    
 }
@@ -169,10 +162,6 @@ void Board::deleteMe() {
     for (int i = 0; i < 40; i++) {
         delete cellList[i];
     }
-    // for (int i = 0; i < listPlayers.size(); i++) {
-    //     delete listPlayers[i];
-    // }
-    // listPlayers.clear();
     cellList.clear();
    
 }
@@ -225,12 +214,6 @@ void Board::loadBoard(ifstream& in) {
         listPlayers.emplace_back(newPlayer);
     }
     setNumPlayers(playerNum);
-
-    // cell setup: 
-    // MC owner improvements
-    // DC owner improvements
-
-    // we don't actually know how many buildings are saved so..
 
     while(getline(in,line)){
         string buildingName;
@@ -356,17 +339,8 @@ void Board::subCup(){
     activeCups -= 1;
 }
 
-// Player Board::getWinner() {
+void Board::next() {}
 
-// }
-// Player Board::getCurrentPlayer() {
-//     return currentPlayer;
-// }
-void Board::next() {
-
-}
-
-// 08/11 + 08/12 changes
 void Board::auction(Property * p) {
     cout << "Auction start: " << endl;
     cout << p->getName() << " is being auctioned." << endl;
@@ -470,7 +444,6 @@ void Board::all() {
     for (auto i = listPlayers.begin(); i != listPlayers.end(); ++i) {
 		// properties with the following features are gyms
         cout << (*i)->getName() << " has: " << endl;
-        //cout << "\t Money: " << to_string((*i)->getCurrMoney()) << endl;
         cout << (*i)->assets() << endl;
 	}
 }

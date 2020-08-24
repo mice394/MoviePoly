@@ -11,16 +11,6 @@ NeedlesHall::NeedlesHall(int n){
 
 NeedlesHall::~NeedlesHall(){}
 
-/*
--200 = 1/18
--100 = 1/9
--50 = 1/6
-25 = 1/3
-50 = 1/6
-100 = 1/9
-200 = 1/18
-*/
-
 void NeedlesHall::amountChange(Player* currPlayer){
     string result;
     int currMoney = currPlayer->getCurrMoney();

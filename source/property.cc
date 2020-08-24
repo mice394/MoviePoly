@@ -43,11 +43,6 @@ void Property::setPropPrice(int n){
     PropertyPrice = n;
 }
 
-// // getOwner = player name or player object?
-// Player * Property::getOwner(){
-//     return owner;
-// }
-
 bool Property::getIsMonopoly(){
     return isMonopoly;
 }

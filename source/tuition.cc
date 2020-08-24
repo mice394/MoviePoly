@@ -24,7 +24,6 @@ void Tuition::pay(Player * p){
         if (currMoney < 300) {
             cout << "You are bankrupt!" << endl;
             p->setIsBankrupt(true);
-            // p->setIsPlaying(true);
         }
         else {
             p->setCurrMoney(currMoney - 300);
@@ -36,7 +35,6 @@ void Tuition::pay(Player * p){
         if (currMoney < (p->getNetWorth() * 0.1)) {
             cout << "You are bankrupt!" << endl;
             p->setIsBankrupt(true);
-            // p->setIsPlaying(true);
         }
         else {
             cout << "You've had " << (p->getNetWorth() * 0.1) << " deducted from your savings." << endl;
