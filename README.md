@@ -51,7 +51,7 @@ MoviePoly is an enhanced version of monopoly with a theme of movies in different
 #### Player Avatars
 |**Icon**|**Character**|
 |:-------:|:-------:|
-|G|GENIE|
+|G|GODZILLA|
 |B|BAMBI|
 |D|DEADPOOL|
 |P|PATRICK STAR|
