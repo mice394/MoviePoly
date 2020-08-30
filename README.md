@@ -53,7 +53,7 @@ MoviePoly is an enhanced version of monopoly with a theme of movies in different
 |:-------:|:-------:|
 |G|GODZILLA|
 |B|BAMBI|
-|D|DEADPOOL|
+|D|DUMBLEDORE|
 |P|PIKACHU|
 |S|SHERLOCK|
 |M|MARIO|
