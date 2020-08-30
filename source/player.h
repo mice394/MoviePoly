@@ -16,11 +16,11 @@ class Player {
     void init(char nameChar, std::string newPlayerType, int newCurrPosition);
     std::string assets();
     int roll();
-    void addCup();
-    void subCup();
+    void addPass();
+    void subPass();
 
     char getName();
-    int getCups();
+    int getPasses();
     std::string getPlayerType();
     bool getIsBankrupt();
     void setIsBankrupt(bool b);
@@ -39,10 +39,10 @@ class Player {
     void restartNumDoubles();
 
     //DC Tims line data
-    int getTimeSpentInTims();
-    void setTimeSpentInTims(int n);
-    bool getInTimsLine();
-    void setInTimsLine(bool b);
+    int getTimeSpentInTimeOut();
+    void setTimeSpentInTimeOut(int n);
+    bool getInTimeOut();
+    void setInTimeOut(bool b);
     int getLastRollSum();
     void setLastRollSum(int n);
 
@@ -53,9 +53,9 @@ class Player {
     bool isOwner(Property * p);
 
   private:
-    int numCups;
-    int timeSpentInTims;
-    bool inTimsLine;
+    int numPasses;
+    int timeSpentInTimeOut;
+    bool inTimeOut;
     int lastRollSum;
 
     char name;

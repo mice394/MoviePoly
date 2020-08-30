@@ -13,20 +13,19 @@ Player::Player() {
 Player::~Player() {
 }
 
-
 void Player::init(char nameChar, std::string newPlayerType, int newCurrPosition) {
     name = nameChar;
     playerType = newPlayerType;
     currPosition = newCurrPosition;
-    timeSpentInTims = 0;
+    timeSpentInTimeOut = 0;
     lastRollSum = 0;
 
     money = 1500;
     isBankrupt = false;
     isPlaying = true;
-    numCups = 0;
+    numPasses = 0;
     numDoubles = 0;
-    bool inTimsLine = false;
+    bool inTimeOut = false;
 }
 
 bool Player::getIsBankrupt(){
@@ -62,16 +61,16 @@ int Player::roll() {
     return value;
 }
 
-int Player::getCups() {
-    return numCups;
+int Player::getPasses() {
+    return numPasses;
 }
 
-void Player::addCup() {
-    numCups += 1;
+void Player::addPass() {
+    numPasses += 1;
 }
 
-void Player::subCup() {
-    numCups -= 1;
+void Player::subPass() {
+    numPasses -= 1;
 }
 
 char Player::getName() {
@@ -119,12 +118,12 @@ void Player::restartNumDoubles(){
     numDoubles = 0;
 }
 
-bool Player::getInTimsLine(){
-    return inTimsLine;
+bool Player::getInTimeOut(){
+    return inTimeOut;
 }
 
-void Player::setInTimsLine(bool timsLine){
-    inTimsLine = timsLine;
+void Player::setInTimeOut(bool timeOut){
+    inTimeOut = timeOut;
 }
 
 int Player::getNetWorth(){
@@ -152,12 +151,12 @@ bool Player::getIsPlaying(){
 }
 
 
-int Player::getTimeSpentInTims(){
-    return timeSpentInTims;
+int Player::getTimeSpentInTimeOut(){
+    return timeSpentInTimeOut;
 }
 
-void Player::setTimeSpentInTims(int n){
-    timeSpentInTims = n;
+void Player::setTimeSpentInTimeOut(int n){
+    timeSpentInTimeOut = n;
 }
 
 int Player::getLastRollSum(){
@@ -187,9 +186,7 @@ void Player::removeProperty(Property * oldProperty) {
     }
 }
 
-
 bool Player::isOwner(Property * p){
-
     for(auto i = properties.begin(); i != properties.end(); ++i){
         if ((*i)->getName() == p->getName()) {
             return true;

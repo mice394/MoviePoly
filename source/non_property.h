@@ -7,7 +7,7 @@ class NonProperty: public Cell{
     public:
         NonProperty();
         ~NonProperty();
-        int activeRims;
+        int timeOutPasses;
         std::string getCellType();
         void notify(Player * somePlayer) override;
 

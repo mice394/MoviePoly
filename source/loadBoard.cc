@@ -9,6 +9,5 @@ using namespace std;
 #include "player.h"
 
 void LoadBoard::init() {
-    char ch;
 	fstream stringin(saveFile, fstream::in);
 }

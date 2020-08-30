@@ -4,8 +4,8 @@
 using namespace std;
 
 NonProperty::NonProperty(){
-    activeRims = 0;
-    cellType = "Non-property";
+    timeOutPasses = 0;
+    cellType = "NON-PROPERTY";
 }
 
 NonProperty::~NonProperty(){}

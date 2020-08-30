@@ -2,50 +2,50 @@
 #include "cell.h"
 #include "player.h"
 #include "property.h"
-#include "arts_1.h"
-#include "arts_2.h"
-#include "dc_tims_line.h"
+#include "stdghibili.h"
+#include "comedy.h"
+#include "time_out_zone.h"
 #include "coop.h"
-#include "al.h"
-#include "b1.h"
-#include "b2.h"
-#include "c2.h"
-#include "cif.h"
-#include "cph.h"
-#include "dwe.h"
-#include "eit.h"
-#include "dc.h"
-#include "ech.h"
-#include "eng.h"
-#include "esc.h"
-#include "ev1.h"
-#include "ev2.h"
-#include "ev3.h"
-#include "goose_nesting.h"
-#include "goToTims.h"
-#include "gym.h"
-#include "health.h"
-#include "hh.h"
-#include "bmh.h"
-#include "lhi.h"
-#include "math.h"
-#include "mc.h"
-#include "mkv.h"
-#include "ml.h"
-#include "needles_hall.h"
-#include "osap.h"
-#include "opt.h"
-#include "pac.h"
-#include "phys.h"
-#include "rch.h"
-#include "rev.h"
-#include "sci_1.h"
-#include "sci_2.h"
-#include "slc.h"
-#include "v1.h"
-#include "uwp.h"
-#include "tuition.h"
-#include "pas.h"
+#include "ponyo.h"
+#include "skyfall.h"
+#include "nonstop.h"
+#include "parasite.h"
+#include "drive_in.h"
+#include "grinch.h"
+#include "klaus.h"
+#include "burning.h"
+#include "notebook.h"
+#include "kingsmen.h"
+#include "christmas.h"
+#include "mother.h"
+#include "frozen.h"
+#include "mulan.h"
+#include "aladdin.h"
+#include "popcorn.h"
+#include "caught_sneaking.h"
+#include "viewing.h"
+#include "horror.h"
+#include "hangover.h"
+#include "purge.h"
+#include "it.h"
+#include "romance.h"
+#include "titanic.h"
+#include "director.h"
+#include "totoro.h"
+#include "chance.h"
+#include "ticket.h"
+#include "carrie.h"
+#include "theatre.h"
+#include "avengers.h"
+#include "elf.h"
+#include "writer.h"
+#include "action.h"
+#include "thriller.h"
+#include "raffle.h"
+#include "producer.h"
+#include "camera.h"
+#include "fine.h"
+#include "superbad.h"
 
 #include <string>
 #include <vector>
@@ -57,88 +57,87 @@
 using namespace std;
 
 Board::Board() {
-    // in order shown in watoply pdf
-    Cell * osap = new OSAP(); //0
-    Cell * al = new AL(); // 1
-    Cell * slc = new SLC{2}; //2
-    Cell * ml = new ML{}; //3
-    Cell * tuition = new Tuition{}; // 4
-    Cell * mkv = new MKV{}; // 5
-    Cell * ech = new ECH(); // 6
-    Cell * needlesHall1 = new NeedlesHall{7}; // 7
-    Cell * pas = new PAS{}; // 8
-    Cell * hh = new HH{}; // 9
-    Cell * timsLine = new DCTimsLine{}; //10
-    Cell * rch = new RCH{}; //11
-    Cell * pac = new PAC{}; //12
-    Cell * dwe = new DWE{}; //13
-    Cell * cph = new CPH{}; //14
-    Cell * uwp = new UWP{}; //15
-    Cell * lhi = new LHI{}; //16
-    Cell * slc2 = new SLC{17}; //17
-    Cell * bmh = new BMH{}; //18
-    Cell * opt = new OPT{}; //19
-    Cell * gooseNesting = new GooseNesting{}; //20
-    Cell * ev1 = new EV1{}; //21
-    Cell * needlesHall2 = new NeedlesHall{22}; //22
-    Cell * ev2 = new EV2{}; //23
-    Cell * ev3 = new EV3{}; //24
-    Cell * v1 = new V1{}; //25
-    Cell * phys = new PHYS(); //26
-    Cell * b1 = new B1(); //27
-    Cell * cif = new CIF{}; //28
-    Cell * b2 = new B2{}; //29
-    Cell * goToTims = new GoToTims{}; //30
-    Cell * eit = new EIT{}; //31
-    Cell * esc = new ESC{}; //32
-    Cell * slc3 = new SLC{33}; //33
-    Cell * c2 = new C2{}; //34
-    Cell * rev = new REV{}; //35
-    Cell * needlesHall3 = new NeedlesHall{36}; //36
-    Cell * mc = new MC{}; //37
+    Cell * ticket = new TICKET(); //0
+    Cell * ponyo = new PONYO(); // 1
+    Cell * raffle1 = new RAFFLE{2}; //2
+    Cell * totoro = new TOTORO{}; //3
+    Cell * fine = new FINE{}; // 4
+    Cell * director = new DIRECTOR{}; // 5
+    Cell * kingsmen = new KINGSMEN(); // 6
+    Cell * chance1 = new CHANCE{7}; // 7
+    Cell * superbad = new SUPERBAD{}; // 8
+    Cell * hangover = new HANGOVER{}; // 9
+    Cell * timeoutzone = new TIMEOUTZONE{}; //10
+    Cell * elf = new ELF{}; //11
+    Cell * theatre = new THEATRE{}; //12
+    Cell * klaus = new KLAUS{}; //13
+    Cell * grinch = new GRINCH{}; //14
+    Cell * camera = new CAMERA{}; //15
+    Cell * itmovie = new IT{}; //16
+    Cell * raffle2 = new RAFFLE{17}; //17
+    Cell * purge = new PURGE{}; //18
+    Cell * carrie = new CARRIE{}; //19
+    Cell * popcorn = new POPCORN{}; //20
+    Cell * frozen = new FROZEN{}; //21
+    Cell * chance2 = new CHANCE{22}; //22
+    Cell * mulan = new MULAN{}; //23
+    Cell * aladdin = new ALADDIN{}; //24
+    Cell * producer = new PRODUCER{}; //25
+    Cell * avengers = new AVENGERS(); //26
+    Cell * skyfall = new SKYFALL(); //27
+    Cell * drive_in = new DRIVE_IN{}; //28
+    Cell * nonstop = new NONSTOP{}; //29
+    Cell * caughtsneaking = new CAUGHTSNEAKING{}; //30
+    Cell * burning = new BURNING{}; //31
+    Cell * mother = new MOTHER{}; //32
+    Cell * raffle3 = new RAFFLE{33}; //33
+    Cell * parasite = new PARASITE{}; //34
+    Cell * writer = new WRITER{}; //35
+    Cell * chance3 = new CHANCE{36}; //36
+    Cell * titanic = new TITANIC{}; //37
     Cell * coopFee = new Coop{}; //38
-    Cell * dc = new DC{}; //39
+    Cell * notebook = new NOTEBOOK{}; //39
 
-    cellList.emplace_back(osap);
-    cellList.emplace_back(al);
-    cellList.emplace_back(slc);
-    cellList.emplace_back(ml);
-    cellList.emplace_back(tuition);
-    cellList.emplace_back(mkv);
-    cellList.emplace_back(ech);
-    cellList.emplace_back(needlesHall1);
-    cellList.emplace_back(pas);
-    cellList.emplace_back(hh);
-    cellList.emplace_back(timsLine);
-    cellList.emplace_back(rch);
-    cellList.emplace_back(pac);
-    cellList.emplace_back(dwe);
-    cellList.emplace_back(cph);
-    cellList.emplace_back(uwp);
-    cellList.emplace_back(lhi);
-    cellList.emplace_back(slc2);
-    cellList.emplace_back(bmh);
-    cellList.emplace_back(opt);
-    cellList.emplace_back(gooseNesting);
-    cellList.emplace_back(ev1);
-    cellList.emplace_back(needlesHall2);
-    cellList.emplace_back(ev2);
-    cellList.emplace_back(ev3);
-    cellList.emplace_back(v1);
-    cellList.emplace_back(phys);
-    cellList.emplace_back(b1);
-    cellList.emplace_back(cif);
-    cellList.emplace_back(b2);
-    cellList.emplace_back(goToTims);
-    cellList.emplace_back(eit);
-    cellList.emplace_back(esc);
-    cellList.emplace_back(slc3);
-    cellList.emplace_back(c2);
-    cellList.emplace_back(rev);
-    cellList.emplace_back(needlesHall3);
-    cellList.emplace_back(mc);
+    cellList.emplace_back(ticket);
+    cellList.emplace_back(ponyo);
+    cellList.emplace_back(raffle1);
+    cellList.emplace_back(totoro);
+    cellList.emplace_back(fine);
+    cellList.emplace_back(director);
+    cellList.emplace_back(kingsmen);
+    cellList.emplace_back(chance1);
+    cellList.emplace_back(superbad);
+    cellList.emplace_back(hangover);
+    cellList.emplace_back(timeoutzone);
+    cellList.emplace_back(elf);
+    cellList.emplace_back(theatre);
+    cellList.emplace_back(klaus);
+    cellList.emplace_back(grinch);
+    cellList.emplace_back(camera);
+    cellList.emplace_back(itmovie);
+    cellList.emplace_back(raffle2);
+    cellList.emplace_back(purge);
+    cellList.emplace_back(carrie);
+    cellList.emplace_back(popcorn);
+    cellList.emplace_back(frozen);
+    cellList.emplace_back(chance2);
+    cellList.emplace_back(mulan);
+    cellList.emplace_back(aladdin);
+    cellList.emplace_back(producer);
+    cellList.emplace_back(avengers);
+    cellList.emplace_back(skyfall);
+    cellList.emplace_back(drive_in);
+    cellList.emplace_back(nonstop);
+    cellList.emplace_back(caughtsneaking);
+    cellList.emplace_back(burning);
+    cellList.emplace_back(mother);
+    cellList.emplace_back(raffle3);
+    cellList.emplace_back(parasite);
+    cellList.emplace_back(writer);
+    cellList.emplace_back(chance3);
+    cellList.emplace_back(titanic);
     cellList.emplace_back(coopFee);
-    cellList.emplace_back(dc);
+    cellList.emplace_back(notebook);
 
     for (int i = 0; i < 40; i++) {
         attach(cellList[i]);
@@ -187,7 +186,7 @@ void Board::loadBoard(ifstream& in) {
 
     string name;
     char charName;
-    int timscups, money, position, timsLine, duration;
+    int timscups, money, position, duration;
 
     for (int i = 0; i < playerNum; i++) {
         in >> name >> charName >> timscups >> money >> position;
@@ -196,20 +195,20 @@ void Board::loadBoard(ifstream& in) {
         newPlayer->init(charName, name, position);
         newPlayer->setCurrMoney(money);
         for(int t = 0; t < timscups; ++t){
-            newPlayer->addCup();
+            newPlayer->addPass();
         }
 
         if(position == 10) {
-			int timsLine;
-			in >> timsLine;
-			if (timsLine == 1) {
+			int timeOut;
+			in >> timeOut;
+			if (timeOut == 1) {
                 in >> duration;
-                newPlayer->setInTimsLine(true);
-                newPlayer->setTimeSpentInTims(duration);
+                newPlayer->setInTimeOut(true);
+                newPlayer->setTimeSpentInTimeOut(duration);
             }
 		}
 		else {
-			newPlayer->setInTimsLine(false);
+			newPlayer->setInTimeOut(false);
 		}
         listPlayers.emplace_back(newPlayer);
     }
@@ -255,11 +254,12 @@ void Board::loadBoard(ifstream& in) {
     }
 }
 
-// trade Rob DC MC
+// trade Rob NOTEBOOK TITANIC
 void Board::trade(Player * currPlayer, Player * requestedPlayer, Cell *offeredCell, Cell *requestedCell) {
     cout << "Hello " << requestedPlayer->getPlayerType() << "!" << endl;
     cout << currPlayer->getPlayerType() << " would like to offer you " + offeredCell->getName() + " for " + requestedCell->getName() << endl;
     cout << "Do you accept? (Y/N)" << endl;
+    cout << ">";
     char c;
     cin >> c;
     if(c == 'Y'){
@@ -275,12 +275,13 @@ void Board::trade(Player * currPlayer, Player * requestedPlayer, Cell *offeredCe
     }
 }
 
-//trade Brad 500 DC indicates that the current player is willing to give 
-// Brad $500 in exchange for the DC building
+//trade Brad 500 NOTEBOOK indicates that the current player is willing to give 
+// Brad $500 in exchange for the NOTEBOOK building
 void Board::trade(Player * currPlayer, Player * requestedPlayer, int money, Cell *requestedCell) {
     cout << "Hello " << requestedPlayer->getPlayerType() << "!" << endl;
     cout << currPlayer->getPlayerType() << " would like to offer you " + to_string(money) + " for " + requestedCell->getName() << endl;
     cout << "Do you accept? (Y/N)" << endl;
+    cout << ">";
     char c;
     cin >> c;
     if (c == 'Y') {
@@ -297,11 +298,12 @@ void Board::trade(Player * currPlayer, Player * requestedPlayer, int money, Cell
     }
 }
 
-// trade Kevin MC 500
+// trade Kevin TITANIC 500
 void Board::trade(Player * currPlayer, Player * requestedPlayer, Cell *offeredCell, int money) {
     cout << "Hello " << requestedPlayer->getPlayerType() << "!" << endl;
     cout << currPlayer->getPlayerType() << " would like to offer you " + offeredCell->getName() + " for " + to_string(money) << endl;
     cout << "Do you accept? (Y/N)" << endl;
+    cout << ">";
     char c;
     cin >> c;
     if (c == 'Y') {
@@ -328,15 +330,15 @@ Cell* Board::findCell(string cellName) {
     return nullptr;
 }
 
-int Board::getTotalCups() {
-    return activeCups;
+int Board::getTotalPasses() {
+    return activePasses;
 }
-void Board::addCup() {
-    activeCups += 1;
+void Board::addPass() {
+    activePasses += 1;
 }
 
-void Board::subCup(){
-    activeCups -= 1;
+void Board::subPass(){
+    activePasses -= 1;
 }
 
 void Board::next() {}
@@ -442,7 +444,7 @@ int Board::mortgage(Property * p){
 
 void Board::all() {
     for (auto i = listPlayers.begin(); i != listPlayers.end(); ++i) {
-		// properties with the following features are gyms
+		// properties with the following features are viewing
         cout << (*i)->getName() << " has: " << endl;
         cout << (*i)->assets() << endl;
 	}
@@ -456,12 +458,12 @@ void Board::save(ostream& out) {
     out << listPlayers.size() << endl;
     for (auto i = listPlayers.begin(); i != listPlayers.end(); ++i) {
         out << (*i)->getPlayerType() << " ";
-        out << (*i)->getName() << " " << (*i)->getCups() << " ";
+        out << (*i)->getName() << " " << (*i)->getPasses() << " ";
         out << (*i)->getCurrMoney() << " ";
         out << (*i)->getCurrPosition();
         if ((*i)->getCurrPosition() == 10) {
-            if ((*i)->getInTimsLine()) {
-                out << " 1 " << (*i)->getTimeSpentInTims() << endl;
+            if ((*i)->getInTimeOut()) {
+                out << " 1 " << (*i)->getTimeSpentInTimeOut() << endl;
             } else {
                 out << "0" << endl;
             }
@@ -472,7 +474,6 @@ void Board::save(ostream& out) {
     for (auto i = cellList.begin(); i != cellList.end(); ++i) {
         if ((*i)->getOwned()) {
             out << (*i)->getName() << " ";
-            Player * newPlayer = (*i)->getOwnedBy();
             out << ((*i)->getOwnedBy())->getName() << " ";
             if ((*i)->getIsMortgaged()) {
                 out << "-1" << endl;
@@ -537,18 +538,18 @@ void Board::topBottomFills(int leftSquare, int rightSquare, bool isClockwise){
     cout << "|" << endl;
 }
 
-void Board::middleHousesFills(char c, string s, int firstProp, int secondProp){
+void Board::middleHousesFills(char c, string s, int firstProp, int secondProp, string colour1, string colour2){
     for (int i = 20; i < 32; i++) { 
         if (i == 20) {
             cout << "|";
             cout.fill(c);
-            if (firstProp == 0){ cout << setw(8) << left <<  s; }
+            if (firstProp == 0){ cout << colour1 << setw(8) << left <<  s << RESET; }
             else {
                 string improvements;
                 for(int i = 0; i < firstProp; ++i){
                     improvements += "I";
                 }
-                cout << setw(8) << left << improvements;
+                cout << colour1 << setw(8) << left << improvements << RESET;
             }
          }
          else if ((i == 21) || (i == 32)) {
@@ -559,13 +560,13 @@ void Board::middleHousesFills(char c, string s, int firstProp, int secondProp){
          else if (i == 31) {
              cout << "|";
              cout.fill(c);
-             if (secondProp == 0){ cout << setw(8) << left <<  s; }
+             if (secondProp == 0){ cout << colour2 << setw(8) << left <<  s << RESET; }
             else {
                 string improvements;
                 for(int i = 0; i < secondProp; ++i){
                     improvements += "I";
                 }
-                cout << setw(8) << left << improvements;
+                cout << colour2 << setw(8) << left << improvements << RESET;
             }
          }
          else {
@@ -581,7 +582,7 @@ void Board::middlePropNames(int firstProp, int secondProp){
         if (i == firstProp) { //First Property
              cout << "|";
              cout.fill(' ');
-             cout << setw(8) << left <<  cellList[firstProp]->getName();
+             cout << setw(8) << left << cellList[firstProp]->getName();
          }
          else if (i == firstProp+1) {
              cout << "|";
@@ -625,13 +626,23 @@ void Board::middleFills(char c, string s, int leftSquare, int rightSquare){
     cout << "|" << endl;
 }
 
-void Board::topBottomImprove(string propName){
+void Board::topBottomImprove(string propName, string colour){
     int improve = static_cast<Property*>(findCell(propName))->getNumImprove();
     string improvements;
     for(int i = 0; i < improve; ++i){
         improvements += "I";
     }
-    cout << setw(8) << left << improvements;
+    cout << colour << setw(8) << left << improvements << RESET;
+}
+
+void Board::normalPrinting(string propName1, string propName2, string propColour1, string propColour2, int propPos1, int propPos2, bool needBottom){
+    int propImprove1 = static_cast<Property*>(findCell(propName1))->getNumImprove();
+    int propImprove2 = static_cast<Property*>(findCell(propName2))->getNumImprove();
+    middleHousesFills(' ', " ", propImprove1, propImprove2, propColour1, propColour2);
+    middleHousesFills('-', "-", 0, 0, "", "");
+    middlePropNames(propPos1, propPos2);
+    middleFills(' ', " ", propPos1, propPos2);
+    if (needBottom) { middleFills('_', "_", -1, -1); }
 }
       
 void Board::print() {
@@ -644,37 +655,37 @@ void Board::print() {
         cout.fill(' ');
 
         if(i == 20) { 
-            cout << setw(8) << left << "GOOSE";
+            cout << setw(8) << left << "POPCORN";
         }
         else if (i == 21) {
-            topBottomImprove("EV1");
+            topBottomImprove("FROZEN", BACKRED);
         }
         else if(i == 22) {
-            cout << setw(8) << left << "NEEDLES";
+            cout << setw(8) << left << "CHANCE";
         }
         else if (i == 23) {
-            topBottomImprove("EV2");
+            topBottomImprove("MULAN", BACKRED);
         }
         else if (i == 24) {
-            topBottomImprove("EV3");
+            topBottomImprove("ALADDIN", BACKRED);
         }
         else if(i == 25) {
-            cout << setw(8) << left << "V1"; 
+            cout << setw(8) << left << "PRODUCER"; 
         }
         else if (i == 26) {
-            topBottomImprove("PHYS");
+            topBottomImprove("AVENGERS", BACKLIGHTYELLOW);
         }
         else if (i == 27) {
-            topBottomImprove("B1");
+            topBottomImprove("SKYFALL", BACKLIGHTYELLOW);
         }
         else if(i == 28) {
-            cout << setw(8) << left <<  "CIF";
+            cout << setw(8) << left <<  "DRIVE-IN";
         }
         else if (i == 29) {
-            topBottomImprove("B2");
+            topBottomImprove("NONSTOP", BACKLIGHTYELLOW);
         }
         else if(i == 30) {
-            cout << setw(8) << left << "GO TO";
+            cout << setw(8) << left << "CAUGHT";
         }
         else {
             cout << setw(8) << left << "";
@@ -686,16 +697,13 @@ void Board::print() {
          cout.fill(' ');
 
          if(i == 20) { 
-             cout << setw(8) << left << "NESTING";
+             cout << setw(8) << left << "STATION";
          }
-         else if(i == 22) {
-             cout << setw(8) << left << "HALL";
-         }
-         else if ((i == 25) || (i == 28)) {
+         else if ((i == 22) || (i == 25) || (i == 28)) {
              cout << setw(8) << left << " "; 
          }
          else if(i == 30) {
-             cout << setw(8) << left << "TIMS";
+             cout << setw(8) << left << "SNEAKING";
          }
          else {
              for (int i = 0; i < 8; i++) {
@@ -711,214 +719,173 @@ void Board::print() {
              cout << setw(8) << left <<  " ";
          }
          else {
-             cout << setw(8) << left << cellList[i]->getName();
+             cout << setw(8) << left <<cellList[i]->getName();
          }
      }
 
     cout << "|" << endl;
-    topBottomFills(20, 30, true); //Goose nesting to Tims
+    topBottomFills(20, 30, true); //Popcorn to CAUGHTSNEAKING
     //FIRST ROW IS DONE HERE
 
-    //second row OPT EIT
-    int OptImprove = static_cast<Property*>(findCell("OPT"))->getNumImprove();
-    int EitImprove = static_cast<Property*>(findCell("EIT"))->getNumImprove();
-    middleHousesFills(' ', " ", OptImprove, EitImprove);
-    middleHousesFills('-', "-", 0, 0);
-    middlePropNames(19, 31);
-    middleFills(' ', " ", 19, 31);
-    middleFills('_', "_", -1, -1);
+    //second row CARRIE BURNING
+    normalPrinting("CARRIE", "BURNING", BACKLIGHTGREEN, BACKDARKGREEN, 19, 31, true);
 
-    //third row BMH ESC
-    int BmhImprove = static_cast<Property*>(findCell("BMH"))->getNumImprove();
-    int EscImprove = static_cast<Property*>(findCell("ESC"))->getNumImprove();
-    middleHousesFills(' ', " ", BmhImprove, EscImprove);
-    middleHousesFills('-', "-", 0, 0);
-    middlePropNames(18, 32);
-    middleFills(' ', " ", 18, 32);
-    middleFills('_', "_", -1, -1);
+    //third row PURGE MOTHER
+    normalPrinting("PURGE", "MOTHER", BACKLIGHTGREEN, BACKDARKGREEN, 18, 32, true);
 
-    //fourth row SLC SLC
+    //fourth row RAFFLE RAFFLE
     middlePropNames(17, 33);
     middleFills(' ', " ", -1, -1);
     middleFills(' ', " ", 17, 33);
     middleFills(' ', " ", -1, -1);
     middleFills('_', "_", -1, -1);
 
-    //fifth row LHI C2
-    int LhiImprove = static_cast<Property*>(findCell("LHI"))->getNumImprove();
-    int C2Improve = static_cast<Property*>(findCell("C2"))->getNumImprove();
-    middleHousesFills(' ', " ", LhiImprove, C2Improve);
-    middleHousesFills('-', "-", 0, 0);
-    middlePropNames(16, 34);
+    //fifth row IT PARASITE
+    normalPrinting("IT", "PARASITE", BACKLIGHTGREEN, BACKDARKGREEN, 16, 34, false);
+
     //starting WATOPOLY logo section
-    cout << "|"; //property LHI
-    cout.fill(' ');
-    string LHIPlayer = findPlayer(16);
-    if (LHIPlayer.empty()) { LHIPlayer = " "; }
-    cout << setw(8) << left <<  LHIPlayer;
-    cout << "|";
-        
-    cout.fill(' '); //Logo
-    cout << setw(16) << left <<  " ";
-    cout.fill('_');
-    cout << setw(48) << left << "_";
-    cout.fill(' ');
-    cout << setw(16) << left <<  " ";
-
-    cout << "|"; // Property C2
-    cout.fill(' ');
-    string C2Player = findPlayer(34);
-    if (C2Player.empty()) { C2Player = " "; }
-    cout << setw(8) << left <<  C2Player;
-    cout << "|";
-    cout << endl;
-
-    cout << "|"; // Property LHI bottom boarder
+    cout << "|"; // Property IT bottom boarder
     cout.fill('_');
     cout << setw(8) << left <<  "_";
     cout << "|";
 
     cout.fill(' '); //Logo
-    cout << setw(15) << left <<  " ";
-    cout << "|";
-    cout << setw(48) << left << " ";
-    cout << "|";
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE <<setw(48) << " __  __            _      _____      _             " << RESET;
     cout.fill(' ');
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property C2 bottom boarder
+    cout << "|"; // Property PARASITE bottom boarder
     cout.fill('_');
     cout << setw(8) << left <<  "_";
     cout << "|";
     cout << endl;
 
-    //sixth row UWP REV
-    cout << "|"; // Property Label UWP
+    //sixth row CAMERA WRITER
+    cout << "|"; // Property Label CAMERA
     cout.fill(' ');
     cout << setw(8) << left <<  cellList[15]->getName();
     cout << "|";
 
     cout.fill(' '); //Logo first row
-    cout << setw(15) << left <<  " ";
-    cout << "|  #   #  ##  #####  ###  ###   ###  #   #   #   |"; //cushion with 1 space on left, 2 on right
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "|  \\/  |          (_)    |  __ \\    | |            " << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property Label REV
+    cout << "|"; // Property Label WRITER
     cout.fill(' ');
     cout << setw(8) << left <<  cellList[35]->getName();
     cout << "|";
     cout << endl;
 
-    cout << "|"; // Property UWP
+    cout << "|"; // Property CAMERA
     cout.fill(' ');
     cout << setw(8) << left <<  " ";
     cout << "|";
 
     cout.fill(' '); //Logo 2nd row
-    cout << setw(15) << left <<  " ";
-    cout << "|  #   # #  #   #   #   # #  # #   # #   #   #   |";
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "| \\  / | _____   ___  ___| |__) |__ | | ___  _   _ " << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property REV
+    cout << "|"; // Property WRITER
     cout.fill(' ');
     cout << setw(8) << left <<  " ";
     cout << "|" << endl;
 
-    cout << "|"; // Property UWP
+    cout << "|"; // Property CAMERA
     cout.fill(' ');
-    string UWPPlayer = findPlayer(15);
-    if (UWPPlayer.empty()) { UWPPlayer = " "; }
-    cout << setw(8) << left <<  UWPPlayer;
+    string CAMERAPlayer = findPlayer(15);
+    if (CAMERAPlayer.empty()) { CAMERAPlayer = " "; }
+    cout << setw(8) << left <<  CAMERAPlayer;
     cout << "|";
 
     cout.fill(' '); //Logo 3rd row
-    cout << setw(15) << left <<  " ";
-    cout << "|  # # # ####   #   #   # ###  #   # #    # #    |";
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "| |\\/| |/ _ \\ \\ / / |/ _ \\  ___/ _ \\| |/ _ \\| | | |" << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property REV
+    cout << "|"; // Property WRITER
     cout.fill(' ');
-    string REVPlayer = findPlayer(35);
-    if (REVPlayer.empty()) { REVPlayer = " "; }
-    cout << setw(8) << left <<  REVPlayer;
+    string WRITERPlayer = findPlayer(35);
+    if (WRITERPlayer.empty()) { WRITERPlayer = " "; }
+    cout << setw(8) << left <<  WRITERPlayer;
     cout << "|" << endl;
 
-    cout << "|"; // Property UWP
+    cout << "|"; // Property CAMERA
     cout.fill(' ');
     cout << setw(8) << left <<  " ";
     cout << "|";
 
     cout.fill(' '); //Logo 4th row
-    cout << setw(15) << left <<  " ";
-    cout << "|  # # # #  #   #   #   # #    #   # #     #     |";
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "| |  | | (_) \\ V /| |  __/ |  | (_) | | (_) | |_| |" << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property REV
+    cout << "|"; // Property WRITER
     cout.fill(' ');
     cout << setw(8) << left <<  " ";
     cout << "|" << endl;
 
-    cout << "|"; // Property UWP
+    cout << "|"; // Property CAMERA
     cout.fill('_');
     cout << setw(8) << left <<  "_";
     cout << "|";
 
     cout.fill(' '); //Logo 5th row
-    cout << setw(15) << left <<  " ";
-    cout << "|  ##### #  #   #    ###  #     ###  ## #  #     |";
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "|_|  |_|\\___/ \\_/ |_|\\___|_|   \\___/|_|\\___/ \\__, |" << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property REV
+    cout << "|"; // Property WRITER
     cout.fill('_');
     cout << setw(8) << left <<  "_";
     cout << "|" << endl;
 
-    int CphImprove = static_cast<Property*>(findCell("CPH"))->getNumImprove();
-    cout << "|"; // Property CPH (house area)
+    int GrinchImprove = static_cast<Property*>(findCell("GRINCH"))->getNumImprove();
+    cout << "|"; // Property GRINCH (house area)
     cout.fill(' ');
-    if (CphImprove != 0){
-        topBottomImprove("CPH");
+    if (GrinchImprove != 0){
+        topBottomImprove("GRINCH", BACKPURPLE);
     } else {
-        cout << setw(8) << left <<  " ";
+        cout << BACKPURPLE << setw(8) << left <<  " " << RESET;
     }
     cout << "|";
 
     cout.fill(' '); //Logo
-    cout << setw(15) << left <<  " ";
-    cout << "|";
-    cout.fill('_');
-    cout << setw(48) << left << "_";
-    cout << "|";
-    cout.fill(' ');
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "                                              __/ |" << RESET;
     cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property NEEDLES HALL (needles part)
+    cout << "|"; // Property CHANCE (chance part)
     cout.fill(' ');
-    cout << setw(8) << left <<  "NEEDLES |";
+    cout << setw(8) << left <<  "CHANCE  |";
     cout << endl;
 
-    cout << "|"; // Property CPH (house area end)
+    cout << "|"; // Property GRINCH (house area end)
     cout.fill('-');
     cout << setw(8) << left <<  "-";
     cout << "|";
 
-    cout.fill(' '); //middle
-    cout << setw(80) << left <<  " ";
+    cout.fill(' '); //Logo
+    cout << setw(14) << left <<  " ";
+    cout << LOGOBLUE << setw(48) << "                                             |___/ " << RESET;
+    cout << setw(15) << left <<  " ";
 
-    cout << "|"; // Property NEEDLES HALL (hall part)
+    cout << "|"; // Property CHANCE (house area)
     cout.fill(' ');
-    cout << setw(8) << left <<  "HALL    |";
-    cout << endl;
+    cout << setw(8) << left <<  " ";
+    cout << "|" << endl;
 
-    cout << "|"; // Property Label CPH
+    cout << "|"; // Property Label GRINCH
     cout.fill(' ');
     cout << setw(8) << left <<  cellList[14]->getName();
     cout << "|";
 
-    cout.fill(' '); //middle
+    cout.fill(' '); //logo
     cout << setw(80) << left <<  " ";
 
-    cout << "|"; // Property NEEDLES HALL (house area)
+    cout << "|"; // Property CHANCE (house area)
     cout.fill(' ');
     cout << setw(8) << left <<  " ";
     cout << "|" << endl;
@@ -926,29 +893,18 @@ void Board::print() {
     middleFills(' ', " ", 14, 36);
     middleFills('_', "_", -1, -1);
 
-    //seventh row DWE MC
-    int DweImprove = static_cast<Property*>(findCell("DWE"))->getNumImprove();
-    int McImprove = static_cast<Property*>(findCell("MC"))->getNumImprove();
-    middleHousesFills(' ', " ", DweImprove, McImprove);
-    middleHousesFills('-', "-", 0, 0);
-    middlePropNames(13, 37);
-    middleFills(' ', " ", 13, 37);
-    middleFills('_', "_", -1, -1);
+    //seventh row KLAUS TITANIC
+    normalPrinting("KLAUS", "TITANIC", BACKPURPLE, BACKBLUE, 13, 37, true);
 
-    //eight row PAC COOPFEE
+    //eight row THEATRE COOPFEE
     middlePropNames(12, 38);
     middleFills(' ', " ", -1, -1);
     middleFills(' ', " ", 12, 38);
     middleFills(' ', " ", -1, -1);
     middleFills('_', "_", -1, -1);
 
-    //ninth row RCH DC
-    int RchImprove = static_cast<Property*>(findCell("RCH"))->getNumImprove();
-    int DcImprove = static_cast<Property*>(findCell("DC"))->getNumImprove();
-    middleHousesFills(' ', " ", RchImprove, DcImprove);
-    middleHousesFills('-', "-", 0, 0);
-    middlePropNames(11, 39);
-    middleFills(' ', " ", 11, 39);
+    //ninth row ELF NOTEBOOK
+    normalPrinting("ELF", "NOTEBOOK", BACKPURPLE, BACKBLUE, 11, 39, false);
     for (int i = 20; i < 32; i++) { 
         bool divider = ((i == 20) || (i == 21) || (i == 31) || (i == 32));
         if (divider) { cout << "|"; }
@@ -963,37 +919,37 @@ void Board::print() {
         cout.fill(' ');
 
         if(i == 20) { 
-            cout << setw(8) << left << "DC Tims";
+            cout << setw(8) << left << "TIME OUT";
         }
         else if (i == 21) {
-            topBottomImprove("HH");
+            topBottomImprove("HANGOVER", BACKCYAN);
         }
         else if (i == 22) {
-            topBottomImprove("PAS");
+            topBottomImprove("SUPERBAD", BACKCYAN);
         }
         else if(i == 23) {
-            cout << setw(8) << left << "NEEDLES";
+            cout << setw(8) << left << "CHANCE";
         }
         else if (i == 24) {
-            topBottomImprove("ECH");
+            topBottomImprove("KINGSMEN", BACKCYAN);
         }
         else if(i == 25) {
-            cout << setw(8) << left << "MKV"; 
+            cout << setw(8) << left << "DIRECTOR"; 
         }
         else if(i == 26) {
-            cout << setw(8) << left <<  "TUITION";
+            cout << setw(8) << left <<  "FINE";
         }
         else if (i == 27) {
-            topBottomImprove("ML");
+            topBottomImprove("TOTORO", BACKDARKYELLOW);
         }
         else if(i == 28) {
-            cout << setw(8) << left << "SLC";
+            cout << setw(8) << left << "RAFFLE";
         }
         else if (i == 29) {
-            topBottomImprove("AL");
+            topBottomImprove("PONYO", BACKDARKYELLOW);
         }
         else if(i == 30) {
-            cout << setw(8) << left << "COLLECT";
+            cout << setw(8) << left << "GET FREE";
         }
         else {
             cout << setw(8) << left << "";
@@ -1005,16 +961,13 @@ void Board::print() {
          cout.fill(' ');
 
          if(i == 20) { 
-             cout << setw(8) << left << "Line";
+             cout << setw(8) << left << "ZONE";
          }
-         else if(i == 23) {
-             cout << setw(8) << left << "HALL";
-         }
-         else if ((i == 25) ||(i == 26) || (i == 28)) {
+         else if ((i == 23) || (i == 25) ||(i == 26) || (i == 28)) {
              cout << setw(8) << left << " "; 
          }
          else if(i == 30) {
-            cout << setw(8) << left << "OSAP";
+            cout << setw(8) << left << "TICKET";
         }
          else {
              for (int i = 0; i < 8; i++) {
