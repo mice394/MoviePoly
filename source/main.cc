@@ -57,13 +57,13 @@ int main(int argc, char *argv[]) {
     charList.push_back('D');
     charList.push_back('P');
     charList.push_back('S');
-    charList.push_back('$');
-    charList.push_back('L');
+    charList.push_back('M');
+    charList.push_back('N');
     charList.push_back('T');
     // not a loaded game, new game, so get some necessary info first
     if (!loadedGame) {
         // command line interface
-        cout << "Please enter the number of players:";
+        cout << "Please enter the number of players: ";
         string someCommand;
         int numPlayers;
         cin >> someCommand;
@@ -88,28 +88,28 @@ int main(int argc, char *argv[]) {
                 // if chosen option is a valid option
                 if(std::find(charList.begin(), charList.end(), name) != charList.end()) {
                     if (name == 'G') {
-                        character = "Goose";
+                        character = "Godzilla";
                         valid = true;
                     } else if (name == 'B') {
-                        character = "GRT Bus";
+                        character = "Bambi";
                         valid = true;
                     } else if (name == 'D') {
-                        character = "Tim Hortons Doughnut";
+                        character = "Dumbledore";
                         valid = true;
                     } else if (name == 'P') {
-                        character = "Professor";
+                        character = "Pikachu";
                         valid = true;
                     } else if (name == 'S') {
-                        character = "Student";
+                        character = "Sherlock";
                         valid = true;
-                    } else if (name == '$') {
-                        character = "Money";
+                    } else if (name == 'M') {
+                        character = "Mario";
                         valid = true;
-                    } else if (name == 'L') {
-                        character = "Laptop";
+                    } else if (name == 'N') {
+                        character = "Naruto";
                         valid = true;
                     } else if (name == 'T') {
-                        character = "Pink Tie";
+                        character = "Thor";
                         valid = true;
                     }
                     charList.erase(remove(charList.begin(), charList.end(), name), charList.end());
@@ -143,7 +143,7 @@ int main(int argc, char *argv[]) {
         }
 
         cout << "\n-------------------------------------------------------" << endl;
-        cout << "Player " << players[curr_player]->getName() << "’s turn." << endl;
+        cout << "Player " << players[curr_player]->getPlayerType() << "’s turn." << endl;
         cout << "-------------------------------------------------------\n" << endl;
 
         //if Player is in TIME OUT ZONE, do they want to pay their way out?

@@ -445,7 +445,7 @@ int Board::mortgage(Property * p){
 void Board::all() {
     for (auto i = listPlayers.begin(); i != listPlayers.end(); ++i) {
 		// properties with the following features are viewing
-        cout << (*i)->getName() << " has: " << endl;
+        cout << (*i)->getPlayerType() << " has: " << endl;
         cout << (*i)->assets() << endl;
 	}
 }

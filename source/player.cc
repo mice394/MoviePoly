@@ -13,7 +13,7 @@ Player::Player() {
 Player::~Player() {
 }
 
-void Player::init(char nameChar, std::string newPlayerType, int newCurrPosition) {
+void Player::init(char nameChar, string newPlayerType, int newCurrPosition) {
     name = nameChar;
     playerType = newPlayerType;
     currPosition = newCurrPosition;
