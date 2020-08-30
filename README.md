@@ -54,9 +54,9 @@ MoviePoly is an enhanced version of monopoly with a theme of movies in different
 |G|GODZILLA|
 |B|BAMBI|
 |D|DEADPOOL|
-|P|PATRICK STAR|
-|S|SHERLOCK HOLMES|
-|$|CLASSIC MONEY BAG|
+|P|PIKACHU|
+|S|SHERLOCK|
+|M|MARIO|
 |N|NARUTO|
 |T|THOR|
 
