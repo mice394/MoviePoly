@@ -69,31 +69,31 @@ MoviePoly is an enhanced version of monopoly with a theme of movies in different
 
 ### Code Structure
 For UML, please refer to uml.pdf in repository. <br>
-Design Patterns Used:
+Primary Design Patterns Used:
 * Observer Design Pattern
 * Inheritance
 * Polymorphism
 
 ### Demo
-#### Launching Sample Game
+#### Launching Sample Game D
 | ![sample game launch](//url) |
 |:-------:|
-#### Flags
+#### Flags D D
 |**Testing**|**From Saved Game**|
 |:-------:|:-------:|
 | ![Testing](//url) | ![From Saved Game](//url) |
-#### Trade
+#### Trade D
 |**Money for Property**|**Property for Property**|**Property for Money**|
 |:-------:|:-------:|:-------:|
 | ![M for P](//url) | ![P for P](//url) | ![P for M](//url) |
-#### Improve Property
+#### Improve Property D
 |**Don't Have Monopoly Set**|**Have Monopoly Set**|
 |:-------:|:-------:|
 | ![not allowed](//url) | ![allowed](//url) |
-#### Mortgage/Unmortgage Property
+#### Mortgage/Unmortgage Property D
 | ![mort/unmort](//url) |
 |:-------:|
-#### Bankrupt (follow demo)
+#### Bankrupt D
 | ![bankrupt](//url) |
 |:-------:|
 #### Save Game (show .txt)
