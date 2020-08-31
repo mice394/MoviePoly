@@ -94,6 +94,6 @@ Primary Design Patterns Used:
 #### Bankrupt
 | ![bankrupt](https://github.com/mice394/MoviePoly/blob/master/gifs/bankrupt.gif) |
 |:-------:|
-#### Save Game (show .txt)
+#### Save Game
 | ![save](https://github.com/mice394/MoviePoly/blob/master/gifs/savinggame.gif) |
 |:-------:|
