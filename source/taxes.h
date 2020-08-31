@@ -1,15 +1,15 @@
-#ifndef _COOP_H_
-#define _COOP_H_
+#ifndef _TAXES_H_
+#define _TAXES_H_
 #include <string>
 #include "non_property.h"
 
 class Board;
 class Player;
 
-class Coop : public NonProperty{
+class TAXES : public NonProperty{
     public:
-    Coop();
-    ~Coop();
+    TAXES();
+    ~TAXES();
     void pay(Player * p);
     void notify(Player * p) override;
 

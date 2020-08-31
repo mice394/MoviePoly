@@ -5,7 +5,7 @@
 #include "stdghibili.h"
 #include "comedy.h"
 #include "time_out_zone.h"
-#include "coop.h"
+#include "taxes.h"
 #include "ponyo.h"
 #include "skyfall.h"
 #include "nonstop.h"
@@ -95,7 +95,7 @@ Board::Board() {
     Cell * writer = new WRITER{}; //35
     Cell * chance3 = new CHANCE{36}; //36
     Cell * titanic = new TITANIC{}; //37
-    Cell * coopFee = new Coop{}; //38
+    Cell * taxes = new TAXES{}; //38
     Cell * notebook = new NOTEBOOK{}; //39
 
     cellList.emplace_back(ticket);
@@ -136,7 +136,7 @@ Board::Board() {
     cellList.emplace_back(writer);
     cellList.emplace_back(chance3);
     cellList.emplace_back(titanic);
-    cellList.emplace_back(coopFee);
+    cellList.emplace_back(taxes);
     cellList.emplace_back(notebook);
 
     for (int i = 0; i < 40; i++) {
@@ -896,7 +896,7 @@ void Board::print() {
     //seventh row KLAUS TITANIC
     normalPrinting("KLAUS", "TITANIC", BACKPURPLE, BACKBLUE, 13, 37, true);
 
-    //eight row THEATRE COOPFEE
+    //eight row THEATRE TAXES
     middlePropNames(12, 38);
     middleFills(' ', " ", -1, -1);
     middleFills(' ', " ", 12, 38);

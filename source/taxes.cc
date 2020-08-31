@@ -1,17 +1,17 @@
 #include <string.h>
-#include "coop.h"
+#include "taxes.h"
 #include "board.h"
 #include "player.h"
 using namespace std;
 
-Coop::Coop(){
+TAXES::TAXES(){
     setPosition(38);
-    setName("COOP FEE");
+    setName("TAXES");
 }
 
-Coop::~Coop(){}
+TAXES::~TAXES(){}
 
-void Coop::pay(Player * p){
+void TAXES::pay(Player * p){
     int currMoney = p->getCurrMoney();
     if (currMoney < 150) {
         cout << "You are bankrupt!" << endl;
@@ -20,11 +20,11 @@ void Coop::pay(Player * p){
     }
     else {
         p->setCurrMoney(currMoney - 150);
-        cout << "You've had $150 deducted from your savings for coop." << endl;
+        cout << "You've had $150 deducted from your savings for taxes." << endl;
     }
 }
 
-void Coop::notify(Player * p) {
+void TAXES::notify(Player * p) {
     if (p->getCurrPosition() == getPosition()) {
         pay(p);
     }
