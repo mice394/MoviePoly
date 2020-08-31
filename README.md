@@ -75,27 +75,25 @@ Primary Design Patterns Used:
 * Polymorphism
 
 ### Demo
-#### Launching Sample Game D
-| ![sample game launch](//url) |
+#### Launching Sample Game
+| ![sample game launch](https://github.com/mice394/MoviePoly/blob/master/gifs/launch.gif) |
 |:-------:|
-#### Flags D D
+#### Flags
 |**Testing**|**From Saved Game**|
 |:-------:|:-------:|
-| ![Testing](//url) | ![From Saved Game](//url) |
-#### Trade D
-|**Money for Property**|**Property for Property**|**Property for Money**|
-|:-------:|:-------:|:-------:|
-| ![M for P](//url) | ![P for P](//url) | ![P for M](//url) |
-#### Improve Property D
-|**Don't Have Monopoly Set**|**Have Monopoly Set**|
-|:-------:|:-------:|
-| ![not allowed](//url) | ![allowed](//url) |
-#### Mortgage/Unmortgage Property D
-| ![mort/unmort](//url) |
+| ![Testing](https://github.com/mice394/MoviePoly/blob/master/gifs/testing.gif) | ![From Saved Game](https://github.com/mice394/MoviePoly/blob/master/gifs/savedgame.gif) |
+#### Trade
+| ![trading](https://github.com/mice394/MoviePoly/blob/master/gifs/trade.gif) |
 |:-------:|
-#### Bankrupt D
-| ![bankrupt](//url) |
+#### Improve Property
+| ![improvements](https://github.com/mice394/MoviePoly/blob/master/gifs/improve.gif) |
+|:-------:|
+#### Mortgage/Unmortgage Property
+| ![mort/unmort](https://github.com/mice394/MoviePoly/blob/master/gifs/mortgage.gif) |
+|:-------:|
+#### Bankrupt
+| ![bankrupt](https://github.com/mice394/MoviePoly/blob/master/gifs/bankrupt.gif) |
 |:-------:|
 #### Save Game (show .txt)
-| ![save](//url) |
+| ![save](https://github.com/mice394/MoviePoly/blob/master/gifs/savinggame.gif) |
 |:-------:|
