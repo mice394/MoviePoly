@@ -456,6 +456,11 @@ int main(int argc, char *argv[]) {
             // check for a winner
             if (players.size() == 1) {
                 cout << "Player " << players[0]->getName() << " wins!" << endl;
+                
+                cout << "╔═╗┌─┐┌┐┌┌─┐┬─┐┌─┐┌┬┐┬ ┬┬  ┌─┐┌┬┐┬┌─┐┌┐┌┌─┐┬┬┬" << endl;
+                cout << "║  │ │││││ ┬├┬┘├─┤ │ │ ││  ├─┤ │ ││ ││││└─┐│││" << endl;
+                cout << "╚═╝└─┘┘└┘└─┘┴└─┴ ┴ ┴ └─┘┴─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘ooo" << endl;
+
                 game = false;
                 for (int i = 0; i < players.size(); ++i) {
                     delete players[i]; 
@@ -474,6 +479,9 @@ int main(int argc, char *argv[]) {
             }
             if (count == 1) {
                 cout << "Player " << players[winnerIndex]->getName() << " wins!" << endl;
+                cout << "╔═╗┌─┐┌┐┌┌─┐┬─┐┌─┐┌┬┐┬ ┬┬  ┌─┐┌┬┐┬┌─┐┌┐┌┌─┐┬┬┬" << endl;
+                cout << "║  │ │││││ ┬├┬┘├─┤ │ │ ││  ├─┤ │ ││ ││││└─┐│││" << endl;
+                cout << "╚═╝└─┘┘└┘└─┘┴└─┴ ┴ ┴ └─┘┴─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘ooo" << endl;
                 game = false;
                 for (int i = 0; i < players.size(); ++i) {
                     delete players[i]; 
