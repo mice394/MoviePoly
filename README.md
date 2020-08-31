@@ -47,7 +47,8 @@ MoviePoly is an enhanced version of monopoly with a theme of movies in different
 |--------|CHANCE|CHANCE|
 |--------|COMMUNITY CHEST|RAFFLE|
 |--------|JAIL|TIME OUT ZONE|
-|--------|GO TO JAIL| CAUGHT SNEAKING|
+|--------|GO TO JAIL|CAUGHT SNEAKING|
+|--------|LUXURY TAX|TAXES|
 #### Player Avatars
 |**Icon**|**Character**|
 |:-------:|:-------:|
